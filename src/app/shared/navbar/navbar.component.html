@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <div class="col-lg">
+      <a class="navbar-brand" href="#"> Alex's Portfolio </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" [ngClass]="{ show: navbarOpen }">
+      <ul class="navbar-nav mr-auto">
+        <div class="col-sm">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+        </div>
+        <div class="col-sm">
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+        </div>
+        <div class="col-sm">
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+        </div>
+        <div class="col-sm">
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+        </div>
+        <div class="col-sm">
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>
