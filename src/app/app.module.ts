@@ -5,12 +5,24 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { AboutComponent } from './home/about/about.component';
+import { ExperienceComponent } from './home/experience/experience.component';
+import { ProjectsComponent } from './home/projects/projects.component';
+import { SkillsComponent } from './home/skills/skills.component';
+import { ContactComponent } from './home/contact/contact.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    AboutComponent,
+    ExperienceComponent,
+    ProjectsComponent,
+    SkillsComponent,
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
