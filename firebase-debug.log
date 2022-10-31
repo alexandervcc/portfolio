@@ -1,0 +1,44 @@
+[debug] [2022-10-31T05:22:53.999Z] ----------------------------------------------------------------------
+[debug] [2022-10-31T05:22:54.000Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-10-31T05:22:54.000Z] CLI Version:   11.15.0
+[debug] [2022-10-31T05:22:54.000Z] Platform:      win32
+[debug] [2022-10-31T05:22:54.000Z] Node Version:  v14.18.1
+[debug] [2022-10-31T05:22:54.001Z] Time:          Mon Oct 31 2022 00:22:54 GMT-0500 (Colombia Standard Time)
+[debug] [2022-10-31T05:22:54.001Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-31T05:22:54.037Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-31T05:22:54.038Z] > authorizing via signed-in user (alex.charco.25@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\alexa\Documents\Projects\Angular\portfolio
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-10-31T05:22:56.442Z] Using project from CLI flag: acc-portfolio-41c30
+[debug] [2022-10-31T05:22:56.445Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/acc-portfolio-41c30 [none]
+[debug] [2022-10-31T05:22:56.866Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/acc-portfolio-41c30 200
+[debug] [2022-10-31T05:22:56.867Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/acc-portfolio-41c30 {"projectId":"acc-portfolio-41c30","projectNumber":"599263517336","displayName":"acc-portfolio","name":"projects/acc-portfolio-41c30","resources":{"hostingSite":"acc-portfolio-41c30","storageBucket":"acc-portfolio-41c30.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_ebcddddb-b9d7-49c8-bc55-5edd2bb706e1"}
+[info] i  Using project acc-portfolio-41c30 (acc-portfolio) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
