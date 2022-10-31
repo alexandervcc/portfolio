@@ -1,0 +1,12 @@
+.bottom-rigth {
+  position: fixed;
+  z-index: 99;
+  cursor: pointer;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.btn{
+  width: 4rem;
+  height: 4rem;
+}

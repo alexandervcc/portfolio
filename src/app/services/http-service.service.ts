@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { collection, getDocs } from 'firebase/firestore';
 import { Skill } from '../model/Skill';
 import { db } from '../firebase/config';
-import { DB_COLLECTION } from '../constants/constants';
+import { DB_COLLECTION } from '../constants/db_collections';
 
 @Injectable({
   providedIn: 'root',
