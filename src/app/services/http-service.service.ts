@@ -8,12 +8,16 @@ import { DB_COLLECTION } from '../constants/db_collections';
   providedIn: 'root',
 })
 export class HttpServiceService {
+  private skillsList: Skill[] = [];
+
   private skillsRef = collection(db, DB_COLLECTION.skills.toString());
   constructor() {}
 
   getAllSkills = async (): Promise<Skill[]> => {
-    const querySnapshot = await getDocs(this.skillsRef);
-    const data = querySnapshot.docs.map((e) => e.data() as Skill);
-    return data;
+    if (this.skillsList.length === 0) {
+      const querySnapshot = await getDocs(this.skillsRef);
+      this.skillsList = querySnapshot.docs.map((e) => e.data() as Skill);
+    }
+    return this.skillsList.slice();
   };
 }

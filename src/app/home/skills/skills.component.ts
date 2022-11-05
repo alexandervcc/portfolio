@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Skill } from 'src/app/model/Skill';
 import { HttpServiceService } from 'src/app/services/http-service.service';
 
 @Component({
@@ -7,10 +9,12 @@ import { HttpServiceService } from 'src/app/services/http-service.service';
   styleUrls: ['./skills.component.css'],
 })
 export class SkillsComponent implements OnInit {
+  private skillList: Skill[] = [];
+
   constructor(private httpService: HttpServiceService) {}
 
   async ngOnInit(): Promise<void> {
-    const data = await this.httpService.getAllSkills();
-    console.log('obtained data: ', data);
+    this.skillList = await this.httpService.getAllSkills();
+    console.log('list skills: ', this.skillList);
   }
 }

@@ -1,0 +1,7 @@
+.navbar {
+  z-index: 99;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
