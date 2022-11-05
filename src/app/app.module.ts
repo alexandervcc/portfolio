@@ -12,6 +12,7 @@ import { SkillsComponent } from './home/skills/skills.component';
 import { ContactComponent } from './home/contact/contact.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { FloatingButtonComponent } from './shared/floating-button/floating-button.component';
+import { MainComponent } from './home/main/main.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FloatingButtonComponent } from './shared/floating-button/floating-butto
     ContactComponent,
     FooterComponent,
     FloatingButtonComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,
