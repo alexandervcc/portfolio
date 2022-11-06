@@ -11,6 +11,5 @@ export class SkillCardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    console.log("s: ",this.skill?.name)
   }
 }

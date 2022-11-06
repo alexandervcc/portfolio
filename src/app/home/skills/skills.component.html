@@ -1,12 +1,12 @@
-<section id="skills">
+<div>
   <div class="container">
-    <h1 class="text-center mb-3 pb-3 border-bottom">Skills</h1>
+    <h2 class="text-center mb-3 pb-4">My Skills</h2>
     <div class="card--about container">
       <div class="row">
-        <div class="col mb-4" *ngFor="let skillItem of skillList">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3" *ngFor="let skillItem of skillList">
           <app-skill-card [skill]="skillItem"></app-skill-card>
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>
