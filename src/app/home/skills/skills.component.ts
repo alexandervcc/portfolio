@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { Skill } from 'src/app/model/Skill';
 import { HttpServiceService } from 'src/app/services/http-service.service';
+import { init } from 'aos';
 
 @Component({
   selector: 'app-skills',
@@ -15,5 +15,6 @@ export class SkillsComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.skillList = await this.httpService.getAllSkills();
+    init();
   }
 }

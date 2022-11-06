@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Skill } from 'src/app/model/Skill';
 
+
 @Component({
   selector: 'app-skill-card',
   templateUrl: './skill-card.component.html',
@@ -11,5 +12,6 @@ export class SkillCardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+
   }
 }
