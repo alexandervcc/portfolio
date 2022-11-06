@@ -1,0 +1,28 @@
+#about {
+  min-height: 100vh;
+  height: fit-content;
+  border-bottom: 1px solid white;
+  padding-top: 6rem;
+}
+
+.about--photo {
+  filter: grayscale(100%);
+}
+
+.about--photo:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+  transition: all 0.75s;
+}
+
+.card--about {
+  margin-top: 4rem;
+}
+
+.image--container{
+  padding: 0 1.5rem 0 0;
+}
+
+.about--text{
+  line-height: 1.7;
+}

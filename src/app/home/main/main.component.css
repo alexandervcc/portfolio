@@ -1,29 +1,23 @@
 .me {
-    padding: 20rem 6rem 0 6rem;
-    color: white;
-    font-weight: bold;
-    border-bottom: 1px white solid;
-  }
-  
-  .about--title__hello {
-    font-weight: bold;
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .about--title__name {
-    font-size: 6rem;
-    margin: 0 0 1.5rem 0;
-  }
-  
-  .about--title__role {
-    font-size: 3rem;
-    margin: 0 0 2rem 0;
-  }
-  
-  .about--title__desc {
-    font-size: 2rem;
-    font-weight: normal;
-    font-style: italic;
-  }
-  
+  padding: 16rem 5rem 16rem 5rem;
+  font-weight: bold;
+  min-height: 100vh;
+  height: fit-content;
+}
+
+.about--title__hello {
+  margin-bottom: 0.5rem;
+}
+
+.about--title__name {
+  margin: 0 0 1.5rem 0;
+}
+
+.about--title__role {
+  margin: 0 0 2rem 0;
+}
+
+.about--title__desc {
+  font-weight: normal;
+  font-style: italic;
+}
