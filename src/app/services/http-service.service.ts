@@ -16,7 +16,9 @@ export class HttpServiceService {
   getAllSkills = async (): Promise<Skill[]> => {
     if (this.skillsList.length === 0) {
       const querySnapshot = await getDocs(this.skillsRef);
-      this.skillsList = querySnapshot.docs.map((e) => e.data() as Skill);
+      this.skillsList = querySnapshot.docs
+        .map((e) => e.data() as Skill)
+        .sort((s1, s2) => s1.order - s2.order);
     }
     return this.skillsList.slice();
   };
