@@ -3,4 +3,5 @@ export interface Skill {
   level: string;
   icon: string;
   alt: string;
+  order:number
 }
