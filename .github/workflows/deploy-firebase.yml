@@ -3,15 +3,12 @@ name: Deploy-To-Firebase
 on: 
   pull_request:
     branches: 
-      - main
+      - 'main'
 
-  workflow_dispatch:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js 14.18
