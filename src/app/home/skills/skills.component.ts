@@ -9,12 +9,11 @@ import { HttpServiceService } from 'src/app/services/http-service.service';
   styleUrls: ['./skills.component.css'],
 })
 export class SkillsComponent implements OnInit {
-  private skillList: Skill[] = [];
+  skillList: Skill[] = [];
 
   constructor(private httpService: HttpServiceService) {}
 
   async ngOnInit(): Promise<void> {
     this.skillList = await this.httpService.getAllSkills();
-    console.log('list skills: ', this.skillList);
   }
 }

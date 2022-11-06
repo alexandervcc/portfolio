@@ -1,11 +1,6 @@
 export interface Skill {
   name: string;
-  level: SkillLevel;
+  level: string;
   icon: string;
-}
-
-enum SkillLevel {
-  beginner = 'beginner',
-  proficient = 'proficient',
-  expert = 'expert',
+  alt: string;
 }

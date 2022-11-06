@@ -13,6 +13,7 @@ import { ContactComponent } from './home/contact/contact.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { FloatingButtonComponent } from './shared/floating-button/floating-button.component';
 import { MainComponent } from './home/main/main.component';
+import { SkillCardComponent } from './home/skills/skill-card/skill-card.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { MainComponent } from './home/main/main.component';
     FooterComponent,
     FloatingButtonComponent,
     MainComponent,
+    SkillCardComponent,
   ],
   imports: [
     BrowserModule,
