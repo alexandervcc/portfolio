@@ -1,40 +1,21 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-import { AboutComponent } from './home/about/about.component';
-import { ExperienceComponent } from './home/experience/experience.component';
-import { ProjectsComponent } from './home/projects/projects.component';
-import { SkillsComponent } from './home/skills/skills.component';
-import { ContactComponent } from './home/contact/contact.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { FloatingButtonComponent } from './shared/floating-button/floating-button.component';
-import { MainComponent } from './home/main/main.component';
-import { SkillCardComponent } from './home/skills/skill-card/skill-card.component';
+import { ProjectComponent } from './pages/project/project.component';
+import { HomeModule } from './pages/home/home.module';
+import { SharedModule } from './shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     NavbarComponent,
-    AboutComponent,
-    ExperienceComponent,
-    ProjectsComponent,
-    SkillsComponent,
-    ContactComponent,
     FooterComponent,
-    FloatingButtonComponent,
-    MainComponent,
-    SkillCardComponent,
-  ],
-  imports: [
-    BrowserModule,
-    NgbModule
-  ],
+    ProjectComponent,
+  ], 
+  imports: [HomeModule, SharedModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
