@@ -1,0 +1,15 @@
+.sub-header {
+  margin-left: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: rgb(255, 140, 0);
+  font-weight: bold;
+  display: inline-block;
+  width: 1.5rem;
+}

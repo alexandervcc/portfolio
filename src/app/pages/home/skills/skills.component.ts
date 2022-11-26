@@ -17,6 +17,5 @@ export class SkillsComponent implements OnInit {
     
     this.skillList = await this.httpService.getAllSkills();
     init();
-    console.log("getting: ",this.skillList.length)
   }
 }

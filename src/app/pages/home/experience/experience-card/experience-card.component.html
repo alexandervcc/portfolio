@@ -1,0 +1,20 @@
+<div class="card my-4">
+  <div class="card-header">
+    <h4 class="mx-2">{{ workExperienceItem.position }}</h4>
+    <div class="mx-4">
+      <h5 class="text-dark">{{ workExperienceItem.company }}</h5>
+      <h6 class="text-secondary">
+        {{ workExperienceItem.start | workDateFormat }} -
+        {{ workExperienceItem.end | workDateFormat }}
+      </h6>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <ul class="card-text">
+      <li *ngFor="let exp_desc of workExperienceItem.desc">
+        {{ exp_desc }}
+      </li>
+    </ul>
+  </div>
+</div>

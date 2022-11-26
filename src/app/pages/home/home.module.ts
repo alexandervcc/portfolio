@@ -8,8 +8,9 @@ import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
 import { MainComponent } from './main/main.component';
 import { SkillCardComponent } from './skills/skill-card/skill-card.component';
-import { FloatingButtonComponent } from 'src/app/shared/floating-button/floating-button.component';
+import { FloatingButtonComponent } from 'src/app/shared/components/floating-button/floating-button.component';
 import { SharedModule } from 'src/app/shared.module';
+import { ExperienceCardComponent } from './experience/experience-card/experience-card.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SharedModule } from 'src/app/shared.module';
     ContactComponent,
     MainComponent,
     FloatingButtonComponent,
+    ExperienceCardComponent,
   ],
   imports: [SharedModule],
   exports: [
