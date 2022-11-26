@@ -2,4 +2,10 @@
   <div>
     <h1 class="text-center mb-3 pb-3 border-bottom">My Experience</h1>
   </div>
+  <div class="text-dark">
+    <app-experience-card
+      *ngFor="let item of experience"
+      [exp]="item"
+    ></app-experience-card>
+  </div>
 </section>
