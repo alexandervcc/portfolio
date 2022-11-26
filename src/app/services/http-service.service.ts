@@ -10,7 +10,7 @@ import { db } from '../firebase/config';
 export class HttpServiceService {
   private skillsList: Skill[] = [];
 
-  private skillsRef = collection(db, DB_COLLECTION.skills.toString());
+  private skillsRef = collection(db, DB_COLLECTION.skills.toString()); 
   constructor() {}
 
   getAllSkills = async (): Promise<Skill[]> => {
