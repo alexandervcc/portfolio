@@ -4,7 +4,8 @@
     <div class="mx-4">
       <h5 class="text-dark">{{ workExperienceItem.company }}</h5>
       <h6 class="text-secondary">
-        {{ workExperienceItem.start }} - {{ workExperienceItem.end }}
+        {{ workExperienceItem.start | workDateFormat }} -
+        {{ workExperienceItem.end | workDateFormat }}
       </h6>
     </div>
   </div>
