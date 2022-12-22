@@ -12,6 +12,8 @@ import { FloatingButtonComponent } from 'src/app/shared/components/floating-butt
 import { SharedModule } from 'src/app/shared.module';
 import { ExperienceCardComponent } from './experience/experience-card/experience-card.component';
 
+import { MatGridListModule } from '@angular/material/grid-list';
+
 @NgModule({
   declarations: [
     AboutComponent,
@@ -25,7 +27,7 @@ import { ExperienceCardComponent } from './experience/experience-card/experience
     FloatingButtonComponent,
     ExperienceCardComponent,
   ],
-  imports: [SharedModule],
+  imports: [SharedModule, MatGridListModule],
   exports: [
     AboutComponent,
     HomeComponent,

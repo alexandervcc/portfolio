@@ -1,8 +1,7 @@
 .me {
-  padding: 16rem 5rem 16rem 5rem;
   font-weight: bold;
-  min-height: 100vh;
   height: fit-content;
+  overflow: hidden;
 }
 
 .about--title__hello {
@@ -20,4 +19,15 @@
 .about--title__desc {
   font-weight: normal;
   font-style: italic;
+}
+
+.image--home {
+  background-image: url("../../../../assets/back-home.jpg");
+  height: 100vh;
+  background-size: cover;
+}
+
+.home-container {
+  text-align: right;
+  padding-top: 20rem;
 }
