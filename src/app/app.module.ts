@@ -9,6 +9,8 @@ import { SharedModule } from './shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatGridListModule } from '@angular/material/grid-list';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { AppRouterModule } from './app-router.module';
 
 @NgModule({
   declarations: [
@@ -16,12 +18,14 @@ import { MatGridListModule } from '@angular/material/grid-list';
     NavbarComponent,
     FooterComponent,
     ProjectComponent,
+    NotFoundComponent,
   ],
   imports: [
     HomeModule,
     SharedModule,
     BrowserAnimationsModule,
     MatGridListModule,
+    AppRouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
