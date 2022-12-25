@@ -1,3 +1,7 @@
+.card{
+  margin-bottom: 3rem;
+}
+
 .sub-header {
   margin-left: 1rem;
 }
@@ -12,4 +16,8 @@ ul li::before {
   font-weight: bold;
   display: inline-block;
   width: 1.5rem;
+}
+
+.card-header{
+  padding: 1.5rem 1rem 1.5rem 1rem;
 }
