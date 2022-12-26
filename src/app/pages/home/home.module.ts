@@ -14,6 +14,8 @@ import { ExperienceCardComponent } from './experience/experience-card/experience
 
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ContactFormComponent } from './contact/contact-form/contact-form.component';
+import { ContactFormInfoComponent } from './contact/contact-form/contact-form-info/contact-form-info.component';
+import { SocialIconComponent } from 'src/app/shared/components/social-icon/social-icon.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ContactFormComponent } from './contact/contact-form/contact-form.compon
     MainComponent,
     FloatingButtonComponent,
     ExperienceCardComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    ContactFormInfoComponent,
+    SocialIconComponent
   ],
   imports: [SharedModule, MatGridListModule],
   exports: [
