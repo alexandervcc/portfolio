@@ -12,12 +12,15 @@ import { FloatingButtonComponent } from 'src/app/shared/components/floating-butt
 import { SharedModule } from 'src/app/shared.module';
 import { ExperienceCardComponent } from './experience/experience-card/experience-card.component';
 
-import { MatGridListModule } from '@angular/material/grid-list';
 import { ContactFormComponent } from './contact/contact-form/contact-form.component';
 import { ContactFormInfoComponent } from './contact/contact-form/contact-form-info/contact-form-info.component';
 import { SocialIconComponent } from 'src/app/shared/components/social-icon/social-icon.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactFormInputComponent } from './contact/contact-form/contact-form-input/contact-form-input.component';
+import { ProjectsCarrouselComponent } from './projects/carousel/projects-carrousel.component';
+import { IndicatorsComponent } from './projects/carousel/indicators/indicators.component';
+import { CarouselItemComponent } from './projects/carousel/carousel-item/carousel-item.component';
+import { CarouselButtonsComponent } from './projects/carousel/carousel-buttons/carousel-buttons.component';
 
 @NgModule({
   declarations: [
@@ -35,8 +38,12 @@ import { ContactFormInputComponent } from './contact/contact-form/contact-form-i
     ContactFormInfoComponent,
     SocialIconComponent,
     ContactFormInputComponent,
+    ProjectsCarrouselComponent,
+    IndicatorsComponent,
+    CarouselItemComponent,
+    CarouselButtonsComponent,
   ],
-  imports: [SharedModule, MatGridListModule, ReactiveFormsModule],
+  imports: [SharedModule, ReactiveFormsModule],
   exports: [
     AboutComponent,
     HomeComponent,
