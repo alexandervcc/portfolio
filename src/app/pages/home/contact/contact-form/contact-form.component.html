@@ -1,76 +1,12 @@
-<div class="d-flex justify-content-center">
-  <div class="row gx-5 contact-form">
-    <div class="container form-text">
-      <div class="row gx-2">
-        <div class="col-12 col-12 col-md-6 form-column rigth-border">
-          <app-contact-form-info></app-contact-form-info>
-        </div>
+<div class="contact-form">
+  <div class="container form-text">
+    <div class="row gx-2">
+      <div class="col-12 col-12 col-md-6 form-column border">
+        <app-contact-form-info></app-contact-form-info>
+      </div>
 
-        <div class="col-12 col-12 col-md-6 form-column">
-          <form [formGroup]="contactForm" (ngSubmit)="submitContactForm()">
-            <h5 class="font-weight-bold h3 text-center">Form</h5>
-            <div>
-              <span
-                *ngIf="
-                  !contactForm.get('name')?.valid &&
-                  contactForm.get('name')?.touched
-                "
-                class="text-danger"
-                >A valid name (minimiun 10 characters) is required!</span
-              >
-              <input
-                type="text"
-                id="name"
-                formControlName="name"
-                class="form-control rounded border-white mb-3 form-input"
-                placeholder="Name"
-              />
-            </div>
-            <div>
-              <span
-                *ngIf="
-                  !contactForm.get('email')?.valid &&
-                  contactForm.get('email')?.touched
-                "
-                class="text-danger"
-                >A valid email is required!</span
-              >
-              <input
-                type="email"
-                id="email"
-                formControlName="email"
-                class="form-control rounded border-white mb-3 form-input"
-                placeholder="Email"
-              />
-            </div>
-            <div>
-              <span
-                *ngIf="
-                  !contactForm.get('message')?.valid &&
-                  contactForm.get('message')?.touched
-                "
-                class="text-danger"
-                >A message (minimiun 50 characters) is required!</span
-              >
-              <textarea
-                id="message"
-                formControlName="message"
-                class="form-control rounded border-white mb-3 form-text-area"
-                rows="5"
-                cols="30"
-                placeholder="Message"
-              ></textarea>
-            </div>
-            <div class="text-center">
-              <button
-                class="btn submit-btn font-weight-bold text-uppercase"
-                type="submit"
-              >
-                Send
-              </button>
-            </div>
-          </form>
-        </div>
+      <div class="col-12 col-12 col-md-6 form-column">
+        <app-contact-form-input></app-contact-form-input>
       </div>
     </div>
   </div>

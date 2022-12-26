@@ -5,8 +5,15 @@
 }
 
 .form-container {
-  background-image: url("../../../../assets/back-contact.jpg");
-  height: 90vh;
+  background-image: url("../../../../assets/back-contact.jpg"); 
+  height: fit-content;
   min-height: 90vh;
   background-size: cover;
+}
+
+.center-content{
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

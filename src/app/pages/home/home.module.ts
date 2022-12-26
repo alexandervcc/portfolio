@@ -17,6 +17,7 @@ import { ContactFormComponent } from './contact/contact-form/contact-form.compon
 import { ContactFormInfoComponent } from './contact/contact-form/contact-form-info/contact-form-info.component';
 import { SocialIconComponent } from 'src/app/shared/components/social-icon/social-icon.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ContactFormInputComponent } from './contact/contact-form/contact-form-input/contact-form-input.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ContactFormComponent,
     ContactFormInfoComponent,
     SocialIconComponent,
+    ContactFormInputComponent,
   ],
   imports: [SharedModule, MatGridListModule, ReactiveFormsModule],
   exports: [
