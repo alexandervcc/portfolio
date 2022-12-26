@@ -7,6 +7,7 @@ import { ProjectComponent } from './pages/projects/project.component';
 import { HomeModule } from './pages/home/home.module';
 import { SharedModule } from './shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatGridListModule } from '@angular/material/grid-list';
 import { AppRouterModule } from './app-router.module';
@@ -26,6 +27,7 @@ import { SingleProjectComponent } from './pages/single-project/single-project.co
     BrowserAnimationsModule,
     MatGridListModule,
     AppRouterModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

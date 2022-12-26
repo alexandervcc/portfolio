@@ -13,6 +13,5 @@ export class ExperienceComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.experience = await this.httpService.getWorkExperience();
-    console.log(this.experience.length);
   }
 }

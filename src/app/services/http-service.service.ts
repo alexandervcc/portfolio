@@ -4,6 +4,10 @@ import { Skill } from '../model/Skill';
 import { DB_COLLECTION } from '../constants/db_collections';
 import { db } from '../firebase/config';
 import { WorkExperience } from '../model/WorkExperience';
+import { HttpClient, HttpResponse } from '@angular/common/http';
+import { ContactForm } from '../model/ContactForm';
+import { environment } from 'src/environments/environment.prod';
+import { ResContactDto } from '../model/ResContactDto';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +19,7 @@ export class HttpServiceService {
   private skillsRef = collection(db, DB_COLLECTION.skills.toString());
   private experienceRef = collection(db, DB_COLLECTION.experience.toString());
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   getAllSkills = async (): Promise<Skill[]> => {
     if (this.skillsList.length === 0) {
@@ -35,5 +39,13 @@ export class HttpServiceService {
       );
     }
     return this.workExperienceList.slice();
+  };
+
+  sendContactForm = (body: ContactForm) => {
+    return this.http.post<ResContactDto>(
+      environment.CONTACT_FORM_URL,
+      body,
+      { observe: 'response' }
+    );
   };
 }

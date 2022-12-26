@@ -16,6 +16,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { ContactFormComponent } from './contact/contact-form/contact-form.component';
 import { ContactFormInfoComponent } from './contact/contact-form/contact-form-info/contact-form-info.component';
 import { SocialIconComponent } from 'src/app/shared/components/social-icon/social-icon.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,9 +32,9 @@ import { SocialIconComponent } from 'src/app/shared/components/social-icon/socia
     ExperienceCardComponent,
     ContactFormComponent,
     ContactFormInfoComponent,
-    SocialIconComponent
+    SocialIconComponent,
   ],
-  imports: [SharedModule, MatGridListModule],
+  imports: [SharedModule, MatGridListModule, ReactiveFormsModule],
   exports: [
     AboutComponent,
     HomeComponent,
