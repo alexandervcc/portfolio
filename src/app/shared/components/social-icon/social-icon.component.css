@@ -1,16 +1,23 @@
-.item-social > a {
-  font-size: 1.5rem;
-  width: 3rem;
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  border: 1px solid rgba(133, 133, 133, 0.7);
+.social-media-item,
+.social-text > a {
+  padding: 0.5rem 0rem;
   color: rgba(133, 133, 133, 0.7);
+  text-decoration: none;
 }
 
-.item-social > a:hover {
+.social-media-item:hover,
+.social-text > a:hover {
   color: #f33fb0;
-  border-color: #f33fb0;
+}
+
+.social-text > a > i {
+  font-size: 1.5rem;
+  padding-right: 1rem;
+}
+
+.social-text {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  font-size: 1rem;
 }
