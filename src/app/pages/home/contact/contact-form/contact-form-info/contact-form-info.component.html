@@ -4,20 +4,37 @@
     Feel free to contact me if you need any assistance, help or question about
     me.
   </p>
-  <div class="footer-dark">
-    <div class="container">
-      <app-social-icon
-        [url]="'https://github.com/alexandervcc'"
-        [icon]="'i bi-github'"
-      ></app-social-icon>
-      <app-social-icon
-        [url]="'https://www.linkedin.com/in/alex-charco-cuenca/'"
-        [icon]="'i bi-linkedin'"
-      ></app-social-icon>
-      <app-social-icon
-        [url]="'https://twitter.com/alexander_vcc'"
-        [icon]="'i bi-twitter'"
-      ></app-social-icon>
+  <p class="text-muted text-center h7">
+    Or visit any of my social media below:
+  </p>
+
+  <div class="container">
+    <div class="row social-media-item">
+      <div class="col-2">
+        <app-social-icon
+          [url]="'https://github.com/alexandervcc'"
+          [icon]="'i bi-github'"
+        ></app-social-icon>
+      </div>
+      <div class="col-10 social-text text-muted">alexandervcc</div>
+    </div>
+    <div class="row social-media-item">
+      <div class="col-2">
+        <app-social-icon
+          [url]="'https://www.linkedin.com/in/alex-charco-cuenca/'"
+          [icon]="'i bi-linkedin'"
+        ></app-social-icon>
+      </div>
+      <div class="col-10 social-text">Alex Charco Cuenca</div>
+    </div>
+    <div class="row social-media-item">
+      <div class="col-2">
+        <app-social-icon
+          [url]="'https://twitter.com/alexander_vcc'"
+          [icon]="'i bi-twitter'"
+        ></app-social-icon>
+      </div>
+      <div class="col-10 social-text">alexander_vcc</div>
     </div>
   </div>
 </div>
