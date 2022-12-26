@@ -12,9 +12,21 @@
       <div class="col-sm-6 col-md-3 item">
         <h3>Services</h3>
         <ul>
-          <li><a href="/projects/web">Web Development</a></li>
-          <li><a href="/projects/mobile">Mobile Development</a></li>
-          <li><a href="/projects/design"> Design</a></li>
+          <li>
+            <a [routerLink]="['/projects']" [queryParams]="{ type: 'back' }"
+              >Back-End Development</a
+            >
+          </li>
+          <li>
+            <a [routerLink]="['/projects']" [queryParams]="{ type: 'front' }"
+              >Front-End Development</a
+            >
+          </li>
+          <li>
+            <a [routerLink]="['/projects']" [queryParams]="{ type: 'mobile' }"
+              >Mobile Development</a
+            >
+          </li>
         </ul>
       </div>
       <div class="col-md-6 item text">

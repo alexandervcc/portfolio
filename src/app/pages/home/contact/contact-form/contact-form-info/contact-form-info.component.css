@@ -1,0 +1,9 @@
+.social-media-item {
+  padding: 0.5rem 0rem;
+}
+
+.social-text {
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+}

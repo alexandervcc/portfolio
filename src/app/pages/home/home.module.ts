@@ -13,6 +13,10 @@ import { SharedModule } from 'src/app/shared.module';
 import { ExperienceCardComponent } from './experience/experience-card/experience-card.component';
 
 import { MatGridListModule } from '@angular/material/grid-list';
+import { ContactFormComponent } from './contact/contact-form/contact-form.component';
+import { ContactFormInfoComponent } from './contact/contact-form/contact-form-info/contact-form-info.component';
+import { SocialIconComponent } from 'src/app/shared/components/social-icon/social-icon.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,8 +30,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MainComponent,
     FloatingButtonComponent,
     ExperienceCardComponent,
+    ContactFormComponent,
+    ContactFormInfoComponent,
+    SocialIconComponent,
   ],
-  imports: [SharedModule, MatGridListModule],
+  imports: [SharedModule, MatGridListModule, ReactiveFormsModule],
   exports: [
     AboutComponent,
     HomeComponent,

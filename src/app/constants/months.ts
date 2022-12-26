@@ -10,5 +10,5 @@ export const MONTHS: { [key: number]: string } = {
   8: 'Sep',
   9: 'Oct',
   10: 'Nov',
-  11: 'Dev',
+  11: 'Dec',
 };
