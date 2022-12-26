@@ -13,6 +13,7 @@ import { SharedModule } from 'src/app/shared.module';
 import { ExperienceCardComponent } from './experience/experience-card/experience-card.component';
 
 import { MatGridListModule } from '@angular/material/grid-list';
+import { ContactFormComponent } from './contact/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MainComponent,
     FloatingButtonComponent,
     ExperienceCardComponent,
+    ContactFormComponent
   ],
   imports: [SharedModule, MatGridListModule],
   exports: [
