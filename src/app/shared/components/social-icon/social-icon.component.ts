@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
 export class SocialIconComponent {
   @Input('icon') iconClass: string = '';
   @Input('url') url: string = '';
-  
+  @Input('text') text: string = '';
 }
