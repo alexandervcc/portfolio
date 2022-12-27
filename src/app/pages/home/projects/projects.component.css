@@ -1,5 +1,5 @@
 #projects {
-  min-height: 100vh;
+  min-height: fit-content;
   height: fit-content;
   padding-top: 6rem;
 }

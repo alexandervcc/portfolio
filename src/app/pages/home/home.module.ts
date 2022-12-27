@@ -45,14 +45,7 @@ import { CarouselButtonsComponent } from './projects/carousel/carousel-buttons/c
   ],
   imports: [SharedModule, ReactiveFormsModule],
   exports: [
-    AboutComponent,
     HomeComponent,
-    ExperienceComponent,
-    ProjectsComponent,
-    SkillCardComponent,
-    SkillsComponent,
-    ContactComponent,
-    MainComponent,
     FloatingButtonComponent,
   ],
 })

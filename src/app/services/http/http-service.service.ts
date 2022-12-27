@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { collection, getDocs } from 'firebase/firestore';
-import { Skill } from '../model/Skill';
-import { DB_COLLECTION } from '../constants/db_collections';
-import { db } from '../firebase/config';
-import { WorkExperience } from '../model/WorkExperience';
-import { HttpClient, HttpResponse } from '@angular/common/http';
-import { ContactForm } from '../model/ContactForm';
+import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment.prod';
-import { ResContactDto } from '../model/ResContactDto';
+import { Skill } from 'src/app/model/Skill';
+import { WorkExperience } from 'src/app/model/WorkExperience';
+import { db } from 'src/app/firebase/config';
+import { DB_COLLECTION } from 'src/app/constants/db_collections';
+import { ContactForm } from 'src/app/model/ContactForm';
+import { ResContactDto } from 'src/app/model/ResContactDto';
 
 @Injectable({
   providedIn: 'root',

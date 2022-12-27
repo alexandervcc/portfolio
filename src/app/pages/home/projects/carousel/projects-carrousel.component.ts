@@ -26,5 +26,11 @@ export class ProjectsCarrouselComponent {
       title: 'xd 3',
       img: 'https://images.freeimages.com/images/large-previews/7d4/metro-escalator-in-prague-1638671.jpg',
     },
+    {
+      id: '1',
+      desc: 'mijotron',
+      title: 'xd',
+      img: 'https://images.freeimages.com/images/large-previews/3b2/prague-conference-center-1056491.jpg',
+    }
   ];
 }

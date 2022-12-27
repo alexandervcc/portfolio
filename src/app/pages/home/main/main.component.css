@@ -22,7 +22,7 @@
 }
 
 .image--home {
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/acc-portfolio-41c30.appspot.com/o/back-home.jpg?alt=media&token=492c3332-9621-444f-96fa-e7fc95b24451");
+  background-image: url("../../../../assets/back-home.jpg");
   height: 100vh;
   background-size: cover;
 }

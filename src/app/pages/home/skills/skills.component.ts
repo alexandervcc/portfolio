@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Skill } from 'src/app/model/Skill';
-import { HttpServiceService } from 'src/app/services/http-service.service';
 import { init } from 'aos';
+import { HttpServiceService } from 'src/app/services/http/http-service.service';
 
 @Component({
   selector: 'app-skills',
