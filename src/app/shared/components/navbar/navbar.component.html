@@ -11,13 +11,13 @@
     <div class="collapse navbar-collapse" [ngClass]="{ show: navbarOpen }">
       <ul class="navbar-nav mr-auto">
         <div class="col-sm">
-          <li class="nav-item">
+          <li class="nav-item" [routerLink]="['']" fragment="about">
             <a class="nav-link" href="#about" (click)="closeNavbar()">About</a>
           </li>
         </div>
 
         <div class="col-sm">
-          <li class="nav-item">
+          <li class="nav-item" [routerLink]="['']" fragment="experience">
             <a class="nav-link" href="#experience" (click)="closeNavbar()"
               >Experience</a
             >
@@ -25,7 +25,7 @@
         </div>
 
         <div class="col-sm">
-          <li class="nav-item">
+          <li class="nav-item" [routerLink]="['']" fragment="projects">
             <a class="nav-link" href="#projects" (click)="closeNavbar()"
               >Projects</a
             >
@@ -33,7 +33,7 @@
         </div>
 
         <div class="col-sm">
-          <li class="nav-item">
+          <li class="nav-item" [routerLink]="['']" fragment="contact">
             <a class="nav-link" href="#contact" (click)="closeNavbar()"
               >Contact</a
             >

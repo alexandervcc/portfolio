@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ContactForm } from 'src/app/model/ContactForm';
-import { HttpServiceService } from 'src/app/services/http-service.service';
 import { ResContactDto } from 'src/app/model/ResContactDto';
+import { HttpServiceService } from 'src/app/services/http/http-service.service';
 
 @Component({
   selector: 'app-contact-form-input',

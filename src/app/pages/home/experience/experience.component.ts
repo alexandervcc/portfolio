@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WorkExperience } from 'src/app/model/WorkExperience';
-import { HttpServiceService } from 'src/app/services/http-service.service';
+import { HttpServiceService } from 'src/app/services/http/http-service.service';
 
 @Component({
   selector: 'app-experience',
