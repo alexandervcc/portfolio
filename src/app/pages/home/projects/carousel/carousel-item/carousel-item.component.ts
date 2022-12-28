@@ -10,5 +10,6 @@ export class CarouselItemComponent implements OnInit {
   @Input('item') item?: CarouselData;
   @Input('active') active = '';
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 }
