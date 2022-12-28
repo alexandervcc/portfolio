@@ -6,13 +6,16 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./indicators.component.css'],
 })
 export class IndicatorsComponent implements OnInit {
-  @Input('qtyItems') qtyItems: number = 0;
-  numbers: number[] = [];
- 
+  @Input('qtyItems') qtyItems?: number;
+  numbers?: number[];
+
   ngOnInit(): void {
-    this.numbers = Array.from(Array(this.qtyItems - 1).keys()).map(
-      (e) => e + 1
-    );
-    console.log("nums: ",this.numbers)
+    if (this.qtyItems) {
+      this.numbers = Array.from(Array(this.qtyItems - 1).keys()).map(
+        (e) => e + 1
+      );
+      console.log('nums: ', this.qtyItems);
+      console.log('arr: ', this.numbers);
+    }
   }
 }

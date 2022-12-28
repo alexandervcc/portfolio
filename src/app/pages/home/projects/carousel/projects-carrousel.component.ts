@@ -1,36 +1,24 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CarouselData } from 'src/app/model/CarouselData';
+import { DataStorageService } from 'src/app/services/data-storage/data-storage.service';
 
 @Component({
   selector: 'app-projects-carrousel',
   templateUrl: './projects-carrousel.component.html',
   styleUrls: ['./projects-carrousel.component.css'],
 })
-export class ProjectsCarrouselComponent {
-  @Input('projects') list: CarouselData[] = [
-    {
-      id: '1',
-      desc: 'mijotron',
-      title: 'xd',
-      img: 'https://images.freeimages.com/images/large-previews/3b2/prague-conference-center-1056491.jpg',
-    },
-    {
-      id: '2',
-      desc: 'manaseses',
-      title: 'xd 2',
-      img: 'https://images.freeimages.com/images/large-previews/218/my-dog-cutter-1499799.jpg',
-    },
-    {
-      id: '3',
-      desc: 'babitas',
-      title: 'xd 3',
-      img: 'https://images.freeimages.com/images/large-previews/7d4/metro-escalator-in-prague-1638671.jpg',
-    },
-    {
-      id: '1',
-      desc: 'mijotron',
-      title: 'xd',
-      img: 'https://images.freeimages.com/images/large-previews/3b2/prague-conference-center-1056491.jpg',
-    }
-  ];
+export class ProjectsCarrouselComponent implements OnInit {
+  list: CarouselData[] = [];
+
+  constructor(private dataStorage: DataStorageService) {}
+
+  async ngOnInit(): Promise<void> {
+    const data = await this.dataStorage.getAllProjects();
+    this.list = data.map((d) => ({
+      id: d.name.toLowerCase(),
+      desc: d.description,
+      img: d.main_img,
+      title: d.name,
+    }));
+  }
 }

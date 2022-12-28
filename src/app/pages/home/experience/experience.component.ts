@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WorkExperience } from 'src/app/model/WorkExperience';
-import { HttpServiceService } from 'src/app/services/http/http-service.service';
+import { DataStorageService } from 'src/app/services/data-storage/data-storage.service';
 
 @Component({
   selector: 'app-experience',
@@ -9,9 +9,9 @@ import { HttpServiceService } from 'src/app/services/http/http-service.service';
 })
 export class ExperienceComponent implements OnInit {
   experience: WorkExperience[] = [];
-  constructor(private httpService: HttpServiceService) {}
+  constructor(private dataStorage: DataStorageService) {}
 
   async ngOnInit(): Promise<void> {
-    this.experience = await this.httpService.getWorkExperience();
+    this.experience = await this.dataStorage.getAllWorkExperiences();
   }
 }

@@ -11,5 +11,6 @@ export class CarouselItemComponent implements OnInit {
   @Input('active') active = '';
 
   ngOnInit(): void {
+    console.log('iutem: ', this.item);
   }
 }

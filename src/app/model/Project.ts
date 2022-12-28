@@ -1,7 +1,12 @@
 export interface Project {
-  id: number;
+  id: string;
+  description: string;
+  details: string[];
+  extra_img: string[];
+  main_img: string;
+  links: { [k: string]: string };
   name: string;
-  desc: string;
+  technologies: string[];
   type: ProjectType;
 }
 
