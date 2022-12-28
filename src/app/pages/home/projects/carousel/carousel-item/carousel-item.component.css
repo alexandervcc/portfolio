@@ -1,0 +1,8 @@
+.carousel-caption > a {
+  text-decoration: none;
+  color: white;
+}
+
+.carousel-caption > a:hover {
+  font-weight: bold;
+}

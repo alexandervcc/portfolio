@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Skill } from 'src/app/model/Skill';
 import { init } from 'aos';
-import { HttpServiceService } from 'src/app/services/http/http-service.service';
+import { DataStorageService } from 'src/app/services/data-storage/data-storage.service';
 
 @Component({
   selector: 'app-skills',
@@ -11,11 +11,10 @@ import { HttpServiceService } from 'src/app/services/http/http-service.service';
 export class SkillsComponent implements OnInit {
   skillList: Skill[] = [];
 
-  constructor(private httpService: HttpServiceService) {}
+  constructor(private dataStorage: DataStorageService) {}
 
   async ngOnInit(): Promise<void> {
-    
-    this.skillList = await this.httpService.getAllSkills();
+    this.skillList = await this.dataStorage.getAllSkills();
     init();
   }
 }

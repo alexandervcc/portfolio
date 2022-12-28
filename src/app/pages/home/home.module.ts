@@ -21,6 +21,7 @@ import { ProjectsCarrouselComponent } from './projects/carousel/projects-carrous
 import { IndicatorsComponent } from './projects/carousel/indicators/indicators.component';
 import { CarouselItemComponent } from './projects/carousel/carousel-item/carousel-item.component';
 import { CarouselButtonsComponent } from './projects/carousel/carousel-buttons/carousel-buttons.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { CarouselButtonsComponent } from './projects/carousel/carousel-buttons/c
     CarouselItemComponent,
     CarouselButtonsComponent,
   ],
-  imports: [SharedModule, ReactiveFormsModule],
+  imports: [SharedModule, ReactiveFormsModule,RouterModule],
   exports: [
     HomeComponent,
     FloatingButtonComponent,
