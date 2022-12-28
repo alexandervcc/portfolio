@@ -1,0 +1,5 @@
+.progress {
+  z-index: 10;
+  height: 0.5rem;
+  border-radius: 0px;
+}

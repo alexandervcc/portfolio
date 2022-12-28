@@ -11,6 +11,7 @@ export class DataStorageService {
   private skillsList: Skill[] = [];
   private workExperienceList: WorkExperience[] = [];
   private projectsList: Project[] = [];
+  
   constructor(private http: HttpServiceService) {}
 
   getAllSkills = async (): Promise<Skill[]> => {

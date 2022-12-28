@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRouterModule } from './app-router.module';
 import { SingleProjectComponent } from './pages/single-project/single-project.component';
 import { HomeModule } from './pages/home/home.module';
+import { RouterLoadingBarComponent } from './shared/components/router-loading-bar/router-loading-bar.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HomeModule } from './pages/home/home.module';
     NavbarComponent,
     FooterComponent,
     ProjectComponent,
+    RouterLoadingBarComponent,
     SingleProjectComponent,
   ],
   imports: [
