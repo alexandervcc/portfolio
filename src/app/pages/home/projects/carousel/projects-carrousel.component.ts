@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CarouselData } from 'src/app/model/CarouselData';
 import { DataStorageService } from 'src/app/services/data-storage/data-storage.service';
 
@@ -15,7 +15,7 @@ export class ProjectsCarrouselComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     const data = await this.dataStorage.getAllProjects();
     this.list = data.map((d) => ({
-      id: d.name.toLowerCase(),
+      id: d.id,
       desc: d.description,
       img: d.main_img,
       title: d.name,
