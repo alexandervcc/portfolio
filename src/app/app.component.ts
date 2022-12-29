@@ -10,5 +10,5 @@ export class AppComponent {
   loading = false;
 
   constructor(private router: Router) {}
-
+  
 }
