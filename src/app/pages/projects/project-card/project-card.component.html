@@ -4,11 +4,22 @@
     <p class="card-text">
       {{ project.description }}
     </p>
-    <a [routerLink]="['/project', project.id]" class="card-link"
-      >Project link</a
-    >
-    <a href="{{ project.links['github'] }}" class="card-link" target="_blank"
-      >Github</a
-    >
+  </div>
+  <div class="overflow-hidden p-2">
+    <div class="row">
+      <div class="col-12 col-xs-6 col-sm-6 mb-1">
+        <a [routerLink]="['/project', project.id]" class="btn btn-danger w-100"
+          >Project link</a
+        >
+      </div>
+      <div class="col-12 col-xs-6 col-sm-6 mb-1">
+        <a
+          href="{{ project.links['github'] }}"
+          class="btn btn-dark w-100"
+          target="_blank"
+          >Github</a
+        >
+      </div>
+    </div>
   </div>
 </div>
