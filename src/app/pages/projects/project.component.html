@@ -1,9 +1,16 @@
 <section id="projects" class="container">
-  <div class="project-path border w-100">projects/{{ projectType }}</div>
+  <div class="w-100 project-path">
+    <p class="font-weight-bold text-dark">
+      <a [routerLink]="['/']">Home</a> /
+      <a [routerLink]="['/projects']">Projects</a> /
+      {{ projectType }}
+    </p>
+  </div>
+
   <div class="projects-container container border rounded mt-4">
     <div class="row">
       <ng-container *ngFor="let project of listProjects">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4  col-xl-3">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
           <app-project-card [project-item]="project"></app-project-card>
         </div>
       </ng-container>

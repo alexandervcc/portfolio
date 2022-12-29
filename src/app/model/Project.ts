@@ -12,8 +12,9 @@ export interface Project {
 
 export enum ProjectTypeEnum {
   none = 'none',
-  frontEnd = 'Front-End',
-  backEnd = 'Back-End',
-  fullstack = 'Full-Stack',
-  mobile = 'Mobile',
+  frontEnd = 'front',
+  backEnd = 'back',
+  fullstack = 'full',
+  mobile = 'mobile',
+  cloud = 'cloud',
 }

@@ -35,8 +35,9 @@ export class DataStorageService {
     return this.projectsList.slice();
   };
 
-  getFilteredProjects = async (filterType: string) => {
-    if (filterType === 'all') {
+  getFilteredProjects = async (filterType?: string) => {
+    console.log("filter: ",filterType)
+    if (!filterType) {
       return this.getAllProjects();
     }
     return (await this.getAllProjects()).filter((p) => p.type === filterType);
