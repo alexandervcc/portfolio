@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable, Subscription } from 'rxjs';
+import { Observable, Subscription, tap } from 'rxjs';
 import { ListProjectTypeEnum, Project } from 'src/app/model/Project';
 import { DataStorageService } from 'src/app/services/data-storage/data-storage.service';
 
@@ -10,7 +10,7 @@ import { DataStorageService } from 'src/app/services/data-storage/data-storage.s
   styleUrls: ['./project.component.css'],
 })
 export class ProjectComponent implements OnInit, OnDestroy {
-  projectType?: string;
+  projectType: string = 'all';
   filterType?: string;
   listProjects?: Project[];
 
@@ -20,20 +20,17 @@ export class ProjectComponent implements OnInit, OnDestroy {
   ) {}
 
   async ngOnInit(): Promise<void> {
-    this.route.queryParams.subscribe((params) => {
-      this.projectType = params['type'] || undefined;
-    });
+    this.route.queryParams.subscribe(async (params) => {
+      this.projectType = params['type'] || 'all';
 
-    this.filterType =
-      this.projectType && !ListProjectTypeEnum.includes(this.projectType)
+      this.filterType = !ListProjectTypeEnum.includes(this.projectType)
         ? undefined
         : this.projectType;
-    console.log(this.filterType);
-    this.listProjects = await this.dataStorage.getFilteredProjects(
-      this.filterType
-    );
 
-    console.log("len: ",this.listProjects.length)
+      this.listProjects = await this.dataStorage.getFilteredProjects(
+        this.filterType
+      );
+    });
   }
 
   ngOnDestroy(): void {}

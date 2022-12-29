@@ -1,9 +1,9 @@
 <section id="projects" class="container">
   <div class="w-100 project-path">
-    <p class="font-weight-bold text-dark">
+    <p class="font-weight-bold">
       <a [routerLink]="['/']">Home</a> /
       <a [routerLink]="['/projects']">Projects</a> /
-      {{ projectType }}
+      <span>{{ projectType }}</span>
     </p>
   </div>
   <ng-container *ngIf="!filterType">

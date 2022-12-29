@@ -18,7 +18,10 @@
 .project-path > p > a {
   color: rgb(117, 117, 117);
 }
+.project-path > p > span {
+  color: #f33fb0;
+}
 
 .project-path > p > a:hover {
-    color: #f33fb0;
-  }
+  color: #f33fb0;
+}
