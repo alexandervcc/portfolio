@@ -18,3 +18,5 @@ export enum ProjectTypeEnum {
   mobile = 'mobile',
   cloud = 'cloud',
 }
+
+export const ListProjectTypeEnum = Object.values(ProjectTypeEnum) as string[];

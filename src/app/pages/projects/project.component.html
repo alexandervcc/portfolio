@@ -6,7 +6,9 @@
       {{ projectType }}
     </p>
   </div>
-
+  <ng-container *ngIf="!filterType">
+    <p>There are no matchs for project type: {{ projectType }}</p>
+  </ng-container>
   <div class="projects-container container border rounded mt-4">
     <div class="row">
       <ng-container *ngFor="let project of listProjects">
