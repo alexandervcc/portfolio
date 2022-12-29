@@ -11,7 +11,7 @@ export class DataStorageService {
   private skillsList: Skill[] = [];
   private workExperienceList: WorkExperience[] = [];
   private projectsList: Project[] = [];
-  
+
   constructor(private http: HttpServiceService) {}
 
   getAllSkills = async (): Promise<Skill[]> => {
@@ -33,5 +33,12 @@ export class DataStorageService {
       this.projectsList = await this.http.getProjects();
     }
     return this.projectsList.slice();
+  };
+
+  getFilteredProjects = async (filterType: string) => {
+    if (filterType === 'all') {
+      return this.getAllProjects();
+    }
+    return (await this.getAllProjects()).filter((p) => p.type === filterType);
   };
 }
