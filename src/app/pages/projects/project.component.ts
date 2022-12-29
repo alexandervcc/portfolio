@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Observable, Subscription, tap } from 'rxjs';
 import { ListProjectTypeEnum, Project } from 'src/app/model/Project';
 import { DataStorageService } from 'src/app/services/data-storage/data-storage.service';
@@ -18,10 +18,13 @@ export class ProjectComponent implements OnInit, OnDestroy {
 
   constructor(
     private route: ActivatedRoute,
-    private dataStorage: DataStorageService
+    private dataStorage: DataStorageService,
+    private router: Router
   ) {}
 
   async ngOnInit(): Promise<void> {
+    this.scrollToTop();
+    
     this.routerSubscription = this.route.queryParams.subscribe(
       async (params) => {
         this.projectType = params['type'] || 'all';
@@ -42,4 +45,13 @@ export class ProjectComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.routerSubscription?.unsubscribe();
   }
+
+  private scrollToTop = () => {
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+        return;
+      }
+      window.scrollTo(0, 0);
+    });
+  };
 }
