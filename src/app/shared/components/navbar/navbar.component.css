@@ -1,5 +1,5 @@
-.navbar {
-  z-index: 99;
+.app-navbar {
+  z-index: 5;
 }
 
 .navbar-brand {

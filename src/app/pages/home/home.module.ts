@@ -42,7 +42,7 @@ import { RouterModule } from '@angular/router';
     ProjectsCarrouselComponent,
     IndicatorsComponent,
     CarouselItemComponent,
-    CarouselButtonsComponent,
+    CarouselButtonsComponent
   ],
   imports: [SharedModule, ReactiveFormsModule,RouterModule],
   exports: [

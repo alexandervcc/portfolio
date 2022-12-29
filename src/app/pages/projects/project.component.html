@@ -1,16 +1,19 @@
 <section id="projects" class="container">
-  <br />
-  <br />
+  <div class="w-100 project-path">
+    <p class="font-weight-bold text-dark">
+      <a [routerLink]="['/']">Home</a> /
+      <a [routerLink]="['/projects']">Projects</a> /
+      {{ projectType }}
+    </p>
+  </div>
 
-  <div class="row info-holder">
-    <div class="col-12 col-sm-12 col-md-12 col-lg-6 box-info">
-      <h1>Page in progress...</h1>
-      <p>Please come back later! I am still working on this module.</p>
-    </div>
-    <div
-      class="col-12 col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center"
-    >
-      <img class="rounded img-fluid" src="../../../assets/working.png" alt="" />
+  <div class="projects-container container border rounded mt-4">
+    <div class="row">
+      <ng-container *ngFor="let project of listProjects">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+          <app-project-card [project-item]="project"></app-project-card>
+        </div>
+      </ng-container>
     </div>
   </div>
 </section>

@@ -1,0 +1,14 @@
+<div class="card">
+  <img class="card-img-top" src="{{ project.main_img }}" alt="Card image cap" />
+  <div class="card-body">
+    <p class="card-text">
+      {{ project.description }}
+    </p>
+    <a [routerLink]="['/project', project.id]" class="card-link"
+      >Project link</a
+    >
+    <a href="{{ project.links['github'] }}" class="card-link" target="_blank"
+      >Github</a
+    >
+  </div>
+</div>

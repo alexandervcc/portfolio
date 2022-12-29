@@ -7,12 +7,14 @@ export interface Project {
   links: { [k: string]: string };
   name: string;
   technologies: string[];
-  type: ProjectType;
+  type: ProjectTypeEnum;
 }
 
-enum ProjectType {
-  frontEnd = 'Front-End',
-  backEnd = 'Back-End',
-  fullstack = 'Full-Stack',
-  mobile = 'Mobile',
+export enum ProjectTypeEnum {
+  none = 'none',
+  frontEnd = 'front',
+  backEnd = 'back',
+  fullstack = 'full',
+  mobile = 'mobile',
+  cloud = 'cloud',
 }
