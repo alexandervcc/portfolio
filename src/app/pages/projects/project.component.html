@@ -1,14 +1,17 @@
 <section id="projects" class="container">
-  <div class="w-100 project-path">
-    <p class="font-weight-bold">
+  <div class="w-100 path-container">
+    <p class="project-path font-weight-bold">
       <a [routerLink]="['/']">Home</a> /
       <a [routerLink]="['/projects']">Projects</a> /
       <span>{{ projectType }}</span>
     </p>
+    <ng-container *ngIf="invalidType">
+      <p>
+        There are no matchs for project type: <b>{{ projectType }}</b>
+      </p>
+    </ng-container>
   </div>
-  <ng-container *ngIf="!filterType">
-    <p>There are no matchs for project type: {{ projectType }}</p>
-  </ng-container>
+
   <div class="projects-container container border rounded mt-4">
     <div class="row">
       <ng-container *ngFor="let project of listProjects">
@@ -16,6 +19,9 @@
           <app-project-card [project-item]="project"></app-project-card>
         </div>
       </ng-container>
+    </div>
+    <div class="d-flex flex-row-reverse">
+      Showing {{ listProjects?.length }} of {{ listProjects?.length }}
     </div>
   </div>
 </section>

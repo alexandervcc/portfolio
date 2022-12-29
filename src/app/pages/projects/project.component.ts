@@ -13,6 +13,8 @@ export class ProjectComponent implements OnInit, OnDestroy {
   projectType: string = 'all';
   filterType?: string;
   listProjects?: Project[];
+  routerSubscription?: Subscription;
+  invalidType: boolean = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -20,18 +22,24 @@ export class ProjectComponent implements OnInit, OnDestroy {
   ) {}
 
   async ngOnInit(): Promise<void> {
-    this.route.queryParams.subscribe(async (params) => {
-      this.projectType = params['type'] || 'all';
+    this.routerSubscription = this.route.queryParams.subscribe(
+      async (params) => {
+        this.projectType = params['type'] || 'all';
 
-      this.filterType = !ListProjectTypeEnum.includes(this.projectType)
-        ? undefined
-        : this.projectType;
-
-      this.listProjects = await this.dataStorage.getFilteredProjects(
-        this.filterType
-      );
-    });
+        this.filterType = !ListProjectTypeEnum.includes(this.projectType)
+          ? undefined
+          : this.projectType;
+        this.invalidType =
+          !ListProjectTypeEnum.includes(this.projectType) &&
+          this.projectType !== 'all';
+        this.listProjects = await this.dataStorage.getFilteredProjects(
+          this.filterType
+        );
+      }
+    );
   }
 
-  ngOnDestroy(): void {}
+  ngOnDestroy(): void {
+    this.routerSubscription?.unsubscribe();
+  }
 }
