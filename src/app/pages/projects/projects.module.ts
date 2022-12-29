@@ -6,7 +6,7 @@ import { ProjectComponent } from './project.component';
 
 @NgModule({
   declarations: [ProjectComponent,ProjectCardComponent],
-  imports: [SharedModule, RouterModule],
+  imports: [SharedModule],
   exports: [ProjectComponent,ProjectCardComponent],
 })
 export class ProjectsModule {}

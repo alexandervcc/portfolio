@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Project } from 'src/app/model/Project';
+import { Project, ProjectTypeEnum } from 'src/app/model/Project';
 
 @Component({
   selector: 'app-project-card',
@@ -7,5 +7,15 @@ import { Project } from 'src/app/model/Project';
   styleUrls: ['./project-card.component.css'],
 })
 export class ProjectCardComponent {
-  @Input('project-item') project?: Project;
+  @Input('project-item') project: Project = {
+    description: '',
+    details: [],
+    extra_img: [],
+    id: '',
+    links: {},
+    main_img: '',
+    name: '',
+    technologies: [],
+    type: ProjectTypeEnum.backEnd,
+  };
 }

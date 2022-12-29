@@ -1,11 +1,14 @@
-<div class="card" style="width: 18rem">
-  <img class="card-img-top" src="..." alt="Card image cap" />
+<div class="card">
+  <img class="card-img-top" src="{{ project.main_img }}" alt="Card image cap" />
   <div class="card-body">
     <p class="card-text">
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+      {{ project.description }}
     </p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <a [routerLink]="['/project', project.id]" class="card-link"
+      >Project link</a
+    >
+    <a href="{{ project.links['github'] }}" class="card-link" target="_blank"
+      >Github</a
+    >
   </div>
 </div>
