@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { DataStorageService } from 'src/app/services/data-storage/data-storage.service';
 
 @Component({
   selector: 'app-single-project',
@@ -7,7 +8,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./single-project.component.css'],
 })
 export class SingleProjectComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private dataStorage: DataStorageService
+  ) {}
+
   projectId: string = '';
 
   ngOnInit(): void {
