@@ -12,7 +12,7 @@ import { DataStorageService } from 'src/app/services/data-storage/data-storage.s
 export class ProjectComponent implements OnInit, OnDestroy {
   projectType: string = 'all';
   filterType?: string;
-  listProjects?: Project[];
+  listProjects: Project[] = [];
   routerSubscription?: Subscription;
   invalidType: boolean = true;
 
@@ -24,7 +24,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
 
   async ngOnInit(): Promise<void> {
     this.scrollToTop();
-    
+
     this.routerSubscription = this.route.queryParams.subscribe(
       async (params) => {
         this.projectType = params['type'] || 'all';
@@ -32,9 +32,11 @@ export class ProjectComponent implements OnInit, OnDestroy {
         this.filterType = !ListProjectTypeEnum.includes(this.projectType)
           ? undefined
           : this.projectType;
+
         this.invalidType =
           !ListProjectTypeEnum.includes(this.projectType) &&
           this.projectType !== 'all';
+
         this.listProjects = await this.dataStorage.getFilteredProjects(
           this.filterType
         );
