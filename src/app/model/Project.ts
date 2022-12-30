@@ -17,6 +17,7 @@ export enum ProjectTypeEnum {
   fullstack = 'full',
   mobile = 'mobile',
   cloud = 'cloud',
+  all = 'all'
 }
 
 export const ListProjectTypeEnum = Object.values(ProjectTypeEnum) as string[];

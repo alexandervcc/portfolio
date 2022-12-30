@@ -33,9 +33,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
           ? undefined
           : this.projectType;
 
-        this.invalidType =
-          !ListProjectTypeEnum.includes(this.projectType) &&
-          this.projectType !== 'all';
+        this.invalidType = !ListProjectTypeEnum.includes(this.projectType);
 
         this.listProjects = await this.dataStorage.getFilteredProjects(
           this.filterType

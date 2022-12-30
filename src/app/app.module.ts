@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
-import { SharedModule } from './shared.module';
+import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRouterModule } from './app-router.module';
