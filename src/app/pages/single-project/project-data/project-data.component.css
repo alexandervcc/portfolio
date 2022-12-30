@@ -10,9 +10,6 @@
   padding: 2rem;
 }
 
-.project-link > a{
-  text-decoration: none;
-}
 
 .img-project{
   object-fit: contain;
