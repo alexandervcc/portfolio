@@ -36,10 +36,13 @@ export class DataStorageService {
   };
 
   getFilteredProjects = async (filterType?: string) => {
-    console.log("filter: ",filterType)
     if (!filterType) {
       return this.getAllProjects();
     }
     return (await this.getAllProjects()).filter((p) => p.type === filterType);
+  };
+
+  getProjectById = async (projectId: string): Promise<Project | undefined> => {
+    return (await this.getAllProjects()).find((p) => p.id === projectId);
   };
 }

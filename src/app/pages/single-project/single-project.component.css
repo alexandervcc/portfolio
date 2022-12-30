@@ -1,4 +1,4 @@
-#single-project{
+#single-project {
   min-height: 70vh;
   height: fit-content;
 }
@@ -12,10 +12,10 @@
   font-weight: bold;
 }
 
-.project-path  > a {
+.project-path > a,
+.project-path {
   color: rgb(117, 117, 117);
 }
-
 
 .project-path > a:hover {
   color: #f33fb0;
