@@ -1,8 +1,11 @@
-<div class="card">
+<div
+  class="card"
+  [attr.data-aos]="index % 2 === 0 ? 'fade-right' : 'fade-left'"
+>
   <div class="card-header bg-dark text-white">
     <h4 class="mx-2">{{ workExperienceItem.position }}</h4>
     <div class="mx-4">
-      <h5 >{{ workExperienceItem.company }}</h5>
+      <h5>{{ workExperienceItem.company }}</h5>
       <h6 class="font-italic">
         {{ workExperienceItem.start | workDateFormat }} -
         {{ workExperienceItem.end | workDateFormat }}
@@ -12,7 +15,10 @@
 
   <div class="card-body">
     <ul class="card-text">
-      <li class="font-weight-bold" *ngFor="let exp_desc of workExperienceItem.desc">
+      <li
+        class="font-weight-bold"
+        *ngFor="let exp_desc of workExperienceItem.desc"
+      >
         {{ exp_desc }}
       </li>
     </ul>

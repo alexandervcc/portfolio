@@ -7,9 +7,8 @@ import { WorkExperience } from 'src/app/model/WorkExperience';
   styleUrls: ['./experience-card.component.css'],
 })
 export class ExperienceCardComponent {
-  @Input('exp')
-  workExperienceItem!: WorkExperience;
-
+  @Input('exp') workExperienceItem!: WorkExperience;
+  @Input('index') index: number = -1;
 
   constructor() {}
 }

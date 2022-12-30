@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Skill } from 'src/app/model/Skill';
-import { init } from 'aos';
 import { DataStorageService } from 'src/app/services/data-storage/data-storage.service';
 
 @Component({
@@ -15,6 +14,5 @@ export class SkillsComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.skillList = await this.dataStorage.getAllSkills();
-    init();
   }
 }
