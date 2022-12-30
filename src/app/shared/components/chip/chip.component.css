@@ -1,0 +1,17 @@
+.chip {
+  margin: 0.2rem 0.25rem;
+  padding: 0 1.5rem;
+  height: 2rem;
+  font-size: 0.85rem;
+  line-height: 2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+}
+
+.chip:hover{
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}

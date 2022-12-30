@@ -7,12 +7,10 @@
         [routerLink]="['/projects']"
         [queryParams]="{ type: project?.type }"
         >{{ project?.type | titlecase }}
-      </a>
-      / <span class="text-dark">{{project?.name }}</span>
+      </a> / <span class="text-dark">{{project?.name}}</span>
     </p>
   </div>
 
-  <app-project-data></app-project-data>
+  <app-project-data [project]="project"></app-project-data>
   <br />
-  <div class="container border">Extra images</div>
 </section>

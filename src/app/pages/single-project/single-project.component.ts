@@ -24,8 +24,8 @@ export class SingleProjectComponent implements OnInit {
       this.projectId = paramMap.get('projectId') || 'all';
     });
 
-    if (this.projectId==='all') {
-      this.router.navigate(['projects'])
+    if (this.projectId === 'all') {
+      this.router.navigate(['projects']);
     }
 
     this.project = await this.dataStorage.getProjectById(this.projectId);

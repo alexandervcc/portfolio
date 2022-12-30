@@ -1,3 +1,16 @@
-.project-container{
+.project-container {
+  min-height: fit-content;
+}
+
+.project-data {
   min-height: 70vh;
 }
+
+.project-info {
+  padding: 2rem;
+}
+
+.project-link > a{
+  text-decoration: none;
+}
+
