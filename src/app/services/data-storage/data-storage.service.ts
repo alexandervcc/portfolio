@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Project } from 'src/app/model/Project';
+import { Project, ProjectTypeEnum } from 'src/app/model/Project';
 import { Skill } from 'src/app/model/Skill';
 import { WorkExperience } from 'src/app/model/WorkExperience';
 import { HttpServiceService } from '../http/http-service.service';
@@ -35,11 +35,14 @@ export class DataStorageService {
     return this.projectsList.slice();
   };
 
-  getFilteredProjects = async (filterType?: string) => {
-    console.log("filter: ",filterType)
-    if (!filterType) {
+  getFilteredProjects = async (filterType: string) => {
+    if (filterType === ProjectTypeEnum.all) {
       return this.getAllProjects();
     }
     return (await this.getAllProjects()).filter((p) => p.type === filterType);
+  };
+
+  getProjectById = async (projectId: string): Promise<Project | undefined> => {
+    return (await this.getAllProjects()).find((p) => p.id === projectId);
   };
 }

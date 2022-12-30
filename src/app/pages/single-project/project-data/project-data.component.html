@@ -1,0 +1,43 @@
+<div class="project-container containerw-100 mx-4">
+  <div class="project-data row border rounded p-2">
+    <div class="project-info col-12 col-sm-12 col-md-12 col-lg-6">
+      <h3>{{ project?.name }}</h3>
+      <h5>"{{ project?.description }}"</h5>
+      <br />
+      <h5>Details</h5>
+      <div class="">
+        <ul>
+          <ng-container *ngFor="let d of project?.details">
+            <li>{{ d }}</li>
+          </ng-container>
+        </ul>
+      </div>
+
+      <br />
+      <h5>Technologies</h5>
+      <div class="techs-container">
+        <ng-container *ngFor="let t of project?.technologies">
+          <app-chip [name]="t"></app-chip>
+        </ng-container>
+      </div>
+      <br />
+      <h5>Links</h5>
+      <div class="">
+        <ul>
+          <ng-container *ngFor="let l of project?.links | keyvalue">
+            <li class="project-link">
+              <a href="{{ l.value }}" target="_blank" class="text-dark">{{
+                l.key | titlecase
+              }}</a>
+            </li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="col-12 col-sm-12 col-md-12 col-lg-6 border overflow-hidden bg-danger p-0"
+    >
+      <img src="{{ project?.main_img }}" class="img-project" />
+    </div>
+  </div>
+</div>

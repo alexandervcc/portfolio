@@ -1,7 +1,6 @@
 #about {
   min-height: 100vh;
   height: fit-content;
-  padding-top: 6rem;
 }
 
 .about--photo {
@@ -16,6 +15,7 @@
 
 .card--about {
   margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .image--container{

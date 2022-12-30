@@ -1,16 +1,15 @@
-<section id="single-project" class="container">
-  <br />
-  <br />
-
-  <div class="row info-holder">
-    <div class="col-12 col-sm-12 col-md-12 col-lg-6 box-info">
-      <h1>Page in progress...</h1>
-      <p>Please come back later! I am still working on this module.</p>
-    </div>
-    <div
-      class="col-12 col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center"
-    >
-      <img class="rounded img-fluid" src="../../../assets/working.png" alt="" />
-    </div>
+<section id="single-project" class="container up-padding-page">
+  <div class="w-100 path-container w-100">
+    <p class="project-path font-weight-bold">
+      <a [routerLink]="['/']">Home</a> /
+      <a [routerLink]="['/projects']">Projects</a> /
+      <a [routerLink]="['/projects']" [queryParams]="{ type: project?.type }"
+        >{{ project?.type | titlecase }}
+      </a> / 
+      <span class="text-dark"> {{ project?.name }}</span>
+    </p>
   </div>
+
+  <app-project-data [project]="project"></app-project-data>
+  <br />
 </section>

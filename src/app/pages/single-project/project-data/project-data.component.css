@@ -1,0 +1,17 @@
+.project-container {
+  min-height: fit-content;
+}
+
+.project-data {
+  min-height: 70vh;
+}
+
+.project-info {
+  padding: 2rem;
+}
+
+
+.img-project{
+  object-fit: contain;
+  height: 100%;
+}

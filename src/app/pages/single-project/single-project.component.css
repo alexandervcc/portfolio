@@ -1,20 +1,23 @@
-#single-project{
-  padding-top: 2rem;
+#single-project {
   min-height: 70vh;
+  height: fit-content;
 }
 
-.info-holder{
-  padding: 2rem;
+.path-container {
+  padding-left: 1rem;
+  height: fit-content;
 }
 
-.box-info{
-  padding: 2rem;
-}
-.box-info > p{
-font-size: 1.5rem;
-font-style: italic;
+.project-path {
+  font-weight: bold;
 }
 
-.box-info>h1{
-  font-size: 4rem;
+.project-path > a,
+.project-path {
+  color: rgb(117, 117, 117);
+  text-decoration: none
+}
+
+.project-path > a:hover {
+  color: #f33fb0;
 }

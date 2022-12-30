@@ -1,5 +1,4 @@
 #projects {
-  padding-top: 5rem;
   min-height: 70vh;
   height: fit-content;
 }
@@ -14,14 +13,12 @@
   height: fit-content;
 }
 
-.project-path {
+.project-path,
+.project-path > a {
   font-weight: bold;
-}
-
-.project-path  > a {
   color: rgb(117, 117, 117);
+  text-decoration: none;
 }
-
 
 .project-path > a:hover {
   color: #f33fb0;

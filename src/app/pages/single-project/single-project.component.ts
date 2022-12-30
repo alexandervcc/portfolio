@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Project } from 'src/app/model/Project';
+import { DataStorageService } from 'src/app/services/data-storage/data-storage.service';
 
 @Component({
   selector: 'app-single-project',
@@ -7,12 +9,29 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./single-project.component.css'],
 })
 export class SingleProjectComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {}
-  projectId: string = '';
+  projectId: string = 'all';
+  project?: Project;
+  message?: string;
 
-  ngOnInit(): void {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private dataStorage: DataStorageService
+  ) {}
+
+  async ngOnInit(): Promise<void> {
     this.route.paramMap.subscribe((paramMap) => {
       this.projectId = paramMap.get('projectId') || 'all';
     });
+
+    if (this.projectId === 'all') {
+      this.router.navigate(['projects']);
+    }
+
+    this.project = await this.dataStorage.getProjectById(this.projectId);
+    if (!this.project) {
+      this.message = 'No project found for provided id.';
+      return;
+    }
   }
 }
