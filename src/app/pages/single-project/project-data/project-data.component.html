@@ -1,6 +1,6 @@
-<div class="project-container container border rounded w-100">
-  <div class="project-data row border p-2">
-    <div class="project-info col-12 col-sm-12 col-md-12 col-lg-6 border">
+<div class="project-container containerw-100 mx-4 ">
+  <div class="project-data row border rounded p-2 ">
+    <div class="project-info col-12 col-sm-12 col-md-12 col-lg-6">
       <h3>{{ project?.name }}</h3>
       <h5>"{{ project?.description }}"</h5>
       <br />
@@ -34,8 +34,8 @@
         </ul>
       </div>
     </div>
-    <div class="project-image col-12 col-sm-12 col-md-12 col-lg-6 border">
-      project image
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6 border overflow-hidden bg-danger p-0">
+      <img src="{{ project?.main_img }}" class="img-project" />
     </div>
   </div>
 </div>

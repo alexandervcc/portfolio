@@ -14,3 +14,7 @@
   text-decoration: none;
 }
 
+.img-project{
+  object-fit: contain;
+  height: 100%;
+}
