@@ -15,6 +15,7 @@
 .project-path > a,
 .project-path {
   color: rgb(117, 117, 117);
+  text-decoration: none
 }
 
 .project-path > a:hover {

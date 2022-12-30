@@ -3,11 +3,10 @@
     <p class="project-path font-weight-bold">
       <a [routerLink]="['/']">Home</a> /
       <a [routerLink]="['/projects']">Projects</a> /
-      <a
-        [routerLink]="['/projects']"
-        [queryParams]="{ type: project?.type }"
+      <a [routerLink]="['/projects']" [queryParams]="{ type: project?.type }"
         >{{ project?.type | titlecase }}
-      </a> / <span class="text-dark">{{project?.name}}</span>
+      </a> / 
+      <span class="text-dark"> {{ project?.name }}</span>
     </p>
   </div>
 
