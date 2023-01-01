@@ -3,4 +3,9 @@
     <h1 class="text-center mb-3 pb-3 border-bottom">Projects</h1>
   </div>
   <app-projects-carrousel></app-projects-carrousel>
+  <div class="container text-center mt-4 all-projects">
+    <a class="text-dark" [routerLink]="['/projects']" [queryParams]="{ type: 'all' }"
+      >< See all Projects ></a
+    >
+  </div>
 </section>

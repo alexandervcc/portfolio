@@ -1,7 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Observable, Subscription, tap } from 'rxjs';
-import { ListProjectTypeEnum, Project } from 'src/app/model/Project';
+import {
+  ListProjectTypeEnum,
+  Project,
+  ProjectsDropdownFilter,
+} from 'src/app/model/Project';
 import { DataStorageService } from 'src/app/services/data-storage/data-storage.service';
 
 @Component({
@@ -10,11 +14,12 @@ import { DataStorageService } from 'src/app/services/data-storage/data-storage.s
   styleUrls: ['./project.component.css'],
 })
 export class ProjectComponent implements OnInit, OnDestroy {
+  dropdownFilters = ProjectsDropdownFilter;
+  routerSubscription?: Subscription;
+  listProjects: Project[] = [];
+  invalidType: boolean = true;
   projectType: string = 'all';
   filterType?: string;
-  listProjects: Project[] = [];
-  routerSubscription?: Subscription;
-  invalidType: boolean = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -38,10 +43,19 @@ export class ProjectComponent implements OnInit, OnDestroy {
           return;
         }
 
-        this.listProjects = await this.dataStorage.getFilteredProjects(
-          this.filterType
-        );
+        await this.getProjectsFilterBy(this.filterType);
       }
+    );
+  }
+
+  async selectProjectFilter(filter: string) {
+    this.projectType = filter;
+    await this.getProjectsFilterBy(this.projectType);
+  }
+
+  async getProjectsFilterBy(filter: string) {
+    this.listProjects = await this.dataStorage.getFilteredProjects(
+      this.projectType
     );
   }
 

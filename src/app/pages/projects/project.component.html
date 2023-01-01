@@ -1,10 +1,19 @@
 <section id="projects" class="container up-padding-page">
   <div class="w-100 path-container">
-    <p class="project-path font-weight-bold">
-      <a [routerLink]="['/']">Home</a> /
-      <a [routerLink]="['/projects']">Projects</a> /
-      <span class="text-dark">{{ projectType | titlecase }} </span>
-    </p>
+    <div class="d-flex justify-content-between">
+      <p class="project-path font-weight-bold">
+        <a [routerLink]="['/']">Home</a> /
+        <a [routerLink]="['/projects']">Projects</a> /
+        <span class="text-dark">{{ projectType | titlecase }} </span>
+      </p>
+      <div class="filter-project">
+        <app-dropdown
+          [options]="dropdownFilters"
+          (selection)="selectProjectFilter($event)"
+          [name]="'Project Filter'"
+        ></app-dropdown>
+      </div>
+    </div>
     <ng-container *ngIf="invalidType">
       <p>
         There are no matchs for project type: <b>{{ projectType }}</b>

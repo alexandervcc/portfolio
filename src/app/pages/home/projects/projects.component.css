@@ -3,3 +3,12 @@
   height: fit-content;
   padding-top: 6rem;
 }
+
+.all-projects > a {
+  text-decoration: none;
+}
+
+.all-projects > a:hover{
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}

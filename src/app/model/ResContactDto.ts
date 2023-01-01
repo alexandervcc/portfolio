@@ -1,4 +1,4 @@
 export interface ResContactDto {
-  code?: number;
-  message?: string;
+  code: number;
+  message: string;
 }
