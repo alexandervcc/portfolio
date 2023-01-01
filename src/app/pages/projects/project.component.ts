@@ -14,12 +14,12 @@ import { DataStorageService } from 'src/app/services/data-storage/data-storage.s
   styleUrls: ['./project.component.css'],
 })
 export class ProjectComponent implements OnInit, OnDestroy {
+  dropdownFilters = ProjectsDropdownFilter;
   routerSubscription?: Subscription;
   listProjects: Project[] = [];
   invalidType: boolean = true;
   projectType: string = 'all';
   filterType?: string;
-  dropdownFilters = ProjectsDropdownFilter;
 
   constructor(
     private route: ActivatedRoute,
@@ -43,16 +43,20 @@ export class ProjectComponent implements OnInit, OnDestroy {
           return;
         }
 
-        this.listProjects = await this.dataStorage.getFilteredProjects(
-          this.filterType
-        );
+        await this.getProjectsFilterBy(this.filterType);
       }
     );
   }
 
-  selectProjectFilter(filter: string) {
-    console.log('f: ', filter);
+  async selectProjectFilter(filter: string) {
     this.projectType = filter;
+    await this.getProjectsFilterBy(this.projectType);
+  }
+
+  async getProjectsFilterBy(filter: string) {
+    this.listProjects = await this.dataStorage.getFilteredProjects(
+      this.projectType
+    );
   }
 
   ngOnDestroy(): void {
