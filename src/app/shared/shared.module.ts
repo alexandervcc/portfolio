@@ -5,9 +5,15 @@ import { RouterModule } from '@angular/router';
 import { DateFormatterPipe } from './pipes/date-formatter.pipe';
 import { ChipComponent } from './components/chip/chip.component';
 import { LoadingCircleComponent } from './components/loading-circle/loading-circle.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 @NgModule({
-  declarations: [DateFormatterPipe, ChipComponent, LoadingCircleComponent],
+  declarations: [
+    DateFormatterPipe,
+    ChipComponent,
+    LoadingCircleComponent,
+    DropdownComponent,
+  ],
   imports: [CommonModule, BrowserModule, RouterModule],
   exports: [
     CommonModule,
@@ -16,6 +22,7 @@ import { LoadingCircleComponent } from './components/loading-circle/loading-circ
     RouterModule,
     ChipComponent,
     LoadingCircleComponent,
+    DropdownComponent,
   ],
 })
 export class SharedModule {}
