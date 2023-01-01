@@ -35,13 +35,11 @@ export class ContactFormInputComponent {
       next: (resp) => {
         this.feedback.code = resp.status;
         this.feedback.message = resp.body?.message!!;
-        console.log('next: ', this.feedback);
         this.sendingForm = FormState.result;
       },
       error: (err) => {
         this.feedback.code = err.status;
         this.feedback.message = err.error.message;
-        console.log('err: ', err);
         this.sendingForm = FormState.result;
       },
     });
