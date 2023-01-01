@@ -14,8 +14,6 @@ export class IndicatorsComponent implements OnInit {
       this.numbers = Array.from(Array(this.qtyItems - 1).keys()).map(
         (e) => e + 1
       );
-      console.log('nums: ', this.qtyItems);
-      console.log('arr: ', this.numbers);
     }
   }
 }
