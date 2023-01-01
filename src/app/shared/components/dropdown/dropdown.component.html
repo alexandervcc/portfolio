@@ -6,12 +6,19 @@
     data-toggle="dropdown"
     aria-haspopup="true"
     aria-expanded="false"
+    (click)="toggleDropdown()"
   >
-    Dropdown button
+    {{ name }}
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" [ngClass]="">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+  <div
+    class="dropdown-menu"
+    aria-labelledby="dropdownMenuButton"
+    [ngClass]="dropdownOpen ? 'show' : ''"
+  >
+    <ng-container *ngFor="let item of options">
+      <button (click)="selectItem(item.value)" class="dropdown-item">
+        {{ item.label | titlecase }}
+      </button>
+    </ng-container>
   </div>
 </div>

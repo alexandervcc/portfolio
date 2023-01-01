@@ -1,7 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Observable, Subscription, tap } from 'rxjs';
-import { ListProjectTypeEnum, Project } from 'src/app/model/Project';
+import {
+  ListProjectTypeEnum,
+  Project,
+  ProjectsDropdownFilter,
+} from 'src/app/model/Project';
 import { DataStorageService } from 'src/app/services/data-storage/data-storage.service';
 
 @Component({
@@ -10,11 +14,12 @@ import { DataStorageService } from 'src/app/services/data-storage/data-storage.s
   styleUrls: ['./project.component.css'],
 })
 export class ProjectComponent implements OnInit, OnDestroy {
+  routerSubscription?: Subscription;
+  listProjects: Project[] = [];
+  invalidType: boolean = true;
   projectType: string = 'all';
   filterType?: string;
-  listProjects: Project[] = [];
-  routerSubscription?: Subscription;
-  invalidType: boolean = true;
+  dropdownFilters = ProjectsDropdownFilter;
 
   constructor(
     private route: ActivatedRoute,
@@ -43,6 +48,11 @@ export class ProjectComponent implements OnInit, OnDestroy {
         );
       }
     );
+  }
+
+  selectProjectFilter(filter: string) {
+    console.log('f: ', filter);
+    this.projectType = filter;
   }
 
   ngOnDestroy(): void {

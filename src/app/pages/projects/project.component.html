@@ -7,7 +7,11 @@
         <span class="text-dark">{{ projectType | titlecase }} </span>
       </p>
       <div class="filter-project">
-        <app-dropdown></app-dropdown>
+        <app-dropdown
+          [options]="dropdownFilters"
+          (selection)="selectProjectFilter($event)"
+          [name]="'Project Filter'"
+        ></app-dropdown>
       </div>
     </div>
     <ng-container *ngIf="invalidType">
