@@ -12,6 +12,6 @@
 
 
 .img-project{
-  object-fit: contain;
+  object-fit: fill;
   height: 100%;
 }

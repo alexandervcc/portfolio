@@ -14,6 +14,7 @@ export class ProjectCardComponent {
     id: '',
     links: {},
     main_img: '',
+    proj_image: '',
     name: '',
     technologies: [],
     type: ProjectTypeEnum.backEnd,

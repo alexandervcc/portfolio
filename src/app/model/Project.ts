@@ -6,6 +6,7 @@ export interface Project {
   details: string[];
   extra_img: string[];
   main_img: string;
+  proj_image: string;
   links: { [k: string]: string };
   name: string;
   technologies: string[];
