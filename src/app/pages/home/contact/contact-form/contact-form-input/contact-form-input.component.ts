@@ -26,6 +26,7 @@ export class ContactFormInputComponent {
   constructor(private http: HttpServiceService) {}
 
   submitContactForm = async () => {
+    
     if (this.contactForm.invalid) {
       return;
     }

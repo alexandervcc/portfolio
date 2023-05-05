@@ -21,5 +21,8 @@ jobs:
     - uses: w9jds/firebase-action@master
       with:
         args: deploy
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+    - uses: FirebaseExtended/action-hosting-deploy@v0
+      with:
+        repoToken: "${{ secrets.GITHUB_TOKEN }}"
+        firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+        projectId: "${{ secrets.GOOGLE_PROJECT_ID }}"
