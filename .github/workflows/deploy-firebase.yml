@@ -1,30 +1,50 @@
-name: Deploy-To-Firebase
+name: Firebase-Deploy
 
-on: 
-  push:
+on:
+  pull_request:
     branches: 
       - 'main'
 
 jobs:
-  build-deploy:
+  build:
+    name: Build project
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.17]
+
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js 16.17
-      uses: actions/setup-node@v1
-      with:
-        node-version: 16.17
-    - name: Install dependencies
-      run: npm install
-    - name: Build
-      run: npm run build --prod
-    - uses: w9jds/firebase-action@master
-      with:
-        args: deploy
-    - uses: FirebaseExtended/action-hosting-deploy@v0
-      with:
-        repoToken: "${{ secrets.GITHUB_TOKEN }}"
-        firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
-        projectId: "${{ secrets.GOOGLE_PROJECT_ID }}"
-    env:
-      GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: npm run build --prod
+      - name: Archive Build
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build
+
+  deploy:
+    name: Deploy to firebase hosting
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get Build Project
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: build
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
