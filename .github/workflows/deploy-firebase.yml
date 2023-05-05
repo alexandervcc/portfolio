@@ -27,8 +27,8 @@ jobs:
       - name: Archive Build
         uses: actions/upload-artifact@v2
         with:
-          name: build
-          path: build
+          name: dist
+          path: dist
 
   deploy:
     name: Deploy to firebase hosting
