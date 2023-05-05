@@ -40,8 +40,8 @@ jobs:
       - name: Get Build Project
         uses: actions/download-artifact@v2
         with:
-          name: build
-          path: build
+          name: dist
+          path: dist
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
