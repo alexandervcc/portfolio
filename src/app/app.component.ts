@@ -30,6 +30,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    // Scripts on <head>
     const head = document.getElementsByTagName('head')[0];
 
     const scriptDownloadGA = document.createElement('script');
