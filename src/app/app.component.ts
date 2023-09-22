@@ -33,18 +33,18 @@ export class AppComponent implements OnInit {
     // Scripts on <head>
     const head = document.getElementsByTagName('head')[0];
 
-    const scriptDownloadGA = document.createElement('script');
+/*     const scriptDownloadGA = document.createElement('script');
     scriptDownloadGA.src = `https://www.googletagmanager.com/gtag/js?id=${environment.ga}`;
     scriptDownloadGA.async = true;
 
     const scriptConfigureGA = document.createElement('script');
     scriptConfigureGA.innerHTML = `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "${environment.ga}");`;
-
+ */
     const scriptConfigureHotjar = document.createElement('script');
     scriptConfigureHotjar.innerHTML = `<script>(function(h,o,t,j,a,r){h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};h._hjSettings={hjid:3661076,hjsv:6};a=o.getElementsByTagName('head')[0];r=o.createElement('script');r.async=1;r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;a.appendChild(r);})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');</script>`;
 
-    head.insertBefore(scriptDownloadGA, head.firstChild);
-    head.insertBefore(scriptConfigureGA, head.firstChild);
+/*     head.insertBefore(scriptDownloadGA, head.firstChild);
+    head.insertBefore(scriptConfigureGA, head.firstChild); */
     head.insertBefore(scriptConfigureHotjar, head.firstChild);
   }
 
