@@ -39,12 +39,8 @@ export class AppComponent implements OnInit {
     const scriptConfigureGA = document.createElement('script');
     scriptConfigureGA.innerHTML = `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "${environment.ga}");`;
 
-    const scriptConfigureHotjar = document.createElement('script');
-    scriptConfigureHotjar.innerHTML = `(function(h,o,t,j,a,r){h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};h._hjSettings={hjid:3661076,hjsv:6};a=o.getElementsByTagName('head')[0];r=o.createElement('script');r.async=1;r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;a.appendChild(r);})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`;
-
     head.insertBefore(scriptDownloadGA, head.firstChild);
     head.insertBefore(scriptConfigureGA, head.firstChild);
-    head.insertBefore(scriptConfigureHotjar, head.firstChild);
   }
 
   private getTitle(state: RouterState, parent: ActivatedRoute): string[] {
