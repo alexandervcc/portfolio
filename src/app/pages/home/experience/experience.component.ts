@@ -8,10 +8,10 @@ import { DataStorageService } from 'src/app/services/data-storage/data-storage.s
   styleUrls: ['./experience.component.css'],
 })
 export class ExperienceComponent implements OnInit {
-  experience: WorkExperience[] = [];
+  experiences: WorkExperience[] = [];
   constructor(private dataStorage: DataStorageService) {}
 
   async ngOnInit(): Promise<void> {
-    this.experience = await this.dataStorage.getAllWorkExperiences();
+    this.experiences = await this.dataStorage.getAllWorkExperiences();
   }
 }

@@ -23,7 +23,10 @@ export class DataStorageService {
 
   getAllWorkExperiences = async (): Promise<WorkExperience[]> => {
     if (this.workExperienceList.length === 0) {
-      this.workExperienceList = await this.http.getWorkExperiences();
+      const experiences = await this.http.getWorkExperiences();
+      this.workExperienceList = experiences.sort(
+        (exp1, exp2) => exp1.start.seconds - exp2.start.seconds
+      );
     }
     return this.workExperienceList.slice();
   };
